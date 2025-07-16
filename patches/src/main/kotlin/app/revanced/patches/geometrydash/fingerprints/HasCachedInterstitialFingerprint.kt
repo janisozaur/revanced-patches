@@ -1,11 +1,11 @@
 package app.revanced.patches.geometrydash.fingerprints
 
-import app.revanced.patcher.fingerprint.MethodFingerprint
+import app.revanced.patcher.fingerprint
 
-internal object HasCachedInterstitialFingerprint : MethodFingerprint(
-    customFingerprint = { methodDef, _ ->
+internal val hasCachedInterstitialFingerprint = fingerprint {
+    custom { methodDef, _ ->
         methodDef.definingClass == "Lcom/literobtop/LiteRobTopActivity;" &&
         methodDef.name == "_hasCachedInterstitial" &&
         methodDef.returnType == "Z"
     }
-)
+}

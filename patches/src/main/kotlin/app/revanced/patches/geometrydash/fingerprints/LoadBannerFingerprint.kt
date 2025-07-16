@@ -1,11 +1,11 @@
 package app.revanced.patches.geometrydash.fingerprints
 
-import app.revanced.patcher.fingerprint.MethodFingerprint
+import app.revanced.patcher.fingerprint
 
-internal object LoadBannerFingerprint : MethodFingerprint(
-    customFingerprint = { methodDef, _ ->
+internal val loadBannerFingerprint = fingerprint {
+    custom { methodDef, _ ->
         methodDef.definingClass == "Lcom/unity3d/services/banners/UnityBanners;" &&
         methodDef.name == "_loadBanner" &&
         methodDef.returnType == "V"
     }
-)
+}

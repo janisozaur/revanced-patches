@@ -1,11 +1,11 @@
 package app.revanced.patches.geometrydash.fingerprints
 
-import app.revanced.patcher.fingerprint.MethodFingerprint
+import app.revanced.patcher.fingerprint
 
-internal object HasCachedRewardedVideoFingerprint : MethodFingerprint(
-    customFingerprint = { methodDef, _ ->
+internal val hasCachedRewardedVideoFingerprint = fingerprint {
+    custom { methodDef, _ ->
         methodDef.definingClass == "Lcom/literobtop/LiteRobTopActivity;" &&
         methodDef.name == "_hasCachedRewardedVideo" &&
         methodDef.returnType == "Z"
     }
-)
+}
