@@ -7,7 +7,7 @@ import app.revanced.patches.geometrydash.fingerprints.*
 @Suppress("unused")
 val disableAdsPatch = bytecodePatch(
     name = "Disable ads",
-    description = "Disables all ads in Geometry Dash Lite including banner ads, interstitial ads, and rewarded video ads.",
+    description = "Disables all ads in Geometry Dash Lite including banner ads, interstitial ads, and rewarded video ads. Dummy text",
 ) {
     compatibleWith("com.robtopx.geometryjumplite")
 
