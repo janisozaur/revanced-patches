@@ -1,3 +1,5 @@
+## 5.123.4
+
 ## [5.31.2](https://github.com/ReVanced/revanced-patches/compare/v5.31.1...v5.31.2) (2025-07-14)
 
 
